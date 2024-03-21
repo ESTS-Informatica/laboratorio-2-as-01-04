@@ -20,7 +20,8 @@ public class Property {
      * @param price The property price.
      */
     public Property(String description, double price) {
-
+        this.description = description;
+        this.price = price;
     }
 
     /**
@@ -34,7 +35,7 @@ public class Property {
      * Description selector.
      */
     public String getDescription() {
-        return null;
+        return description;
     }
 
     /**
@@ -50,7 +51,7 @@ public class Property {
      * Price selector.
      */
     public double getPrice() {
-        return -1;
+        return price;
     }
     
     /**
