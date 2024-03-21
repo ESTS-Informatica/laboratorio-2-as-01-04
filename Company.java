@@ -54,7 +54,7 @@ public class Company {
      * @return This company's properties.
      */
     public List<Property> getProperties() {
-        return null;         // dummy implementation
+        return properties;
     }
 
     /**
@@ -63,7 +63,7 @@ public class Company {
      * @return This company sells.
      */
     public List<Sell> getSells() {
-        return null;         // dummy implementation
+        return sells;
     }
 
     /**
@@ -136,7 +136,11 @@ public class Company {
      * @return true If the request succeeds, false otherwise.
      */
     public boolean createSell(User client, User seller, Property property) {
-        return true;         // dummy implementation
+        if(client == null || seller == null || property == null) {
+            return false;
+        }
+        this.sells.add(new Sell(client, seller, property));
+        return true;
     }
 
     /**
