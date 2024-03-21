@@ -76,6 +76,9 @@ public class Company {
         if(this.clients.contains(client)) {
             return false;
         }
+        if(client == null) {
+            return false;
+        }
         this.clients.add(client);
         return true;
     }
@@ -90,6 +93,9 @@ public class Company {
         if(this.sellers.contains(seller)) {
             return false;
         }
+        if(seller == null) {
+            return false;
+        }
         this.sellers.add(seller);
         return true;
     }
@@ -101,7 +107,14 @@ public class Company {
      * @return true If the registration succeeds, false otherwise.
      */
     public boolean registerProperty(Property property) {
-        return true;         // dummy implementation
+        if(this.properties.contains(property)) {
+            return false;
+        }
+        if(property == null) {
+            return false;
+        }
+        this.properties.add(property);
+        return true;
     }
 
     /**
